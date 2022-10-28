@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iqube Farewell</title>
+    <style>
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+    <div class="center">
+        <img src="./Rolling-1s-190px.gif" alt="" width="100px" height="100px">
+    </div>
+    <script>
+        const center = document.getElementsByClassName("center")[0]
+        setTimeout(()=> {
+            center.innerHTML = `
+            <video width="320" id="onnum_illa" height="240" style="display:none;" >
+            <source src="./onnum illa.mp4" type="video/mp4"></video>
+            <button id="bt" class="btn btn-primary" onclick="playVideo()">Reveal</button>`
+        },5000)
+        function playVideo(){
+            video = document.getElementById("onnum_illa")
+            document.getElementById("bt").style.display = "none"
+            video.style.display = "block"
+            video.play()
+        }
+    </script>
+</body>
+</html>
